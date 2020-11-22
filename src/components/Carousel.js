@@ -97,7 +97,7 @@ export default function Carousel() {
       title: "Nodejs-auth",
       subTitle: "Implemented authentication with passport.",
       imgSrc: node,
-      link: "",
+      link: "https://palakash27-nodejs-auth.herokuapp.com/users/login",
       scLink: "https://github.com/Palakash27/nodejs-auth",
       selected: false,
     },

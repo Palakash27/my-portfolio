@@ -14,7 +14,10 @@ function App() {
       <Container className="p-0">
         <Navbar className="border-bottom" bg="trasparent" expand="lg">
           <Navbar.Brand>
-            <a style={{ textDecoration: "none", color: "inherit" }} href="/">
+            <a
+              style={{ textDecoration: "none", color: "inherit" }}
+              href="/my-portfolio"
+            >
               {title}
             </a>
           </Navbar.Brand>
@@ -22,13 +25,13 @@ function App() {
           <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
           <Navbar.Collapse id="navbar-toggle">
             <Nav className="ml-auto">
-              <Link className="nav-link" to="/">
+              <Link className="nav-link" to="/my-portfolio">
                 Home
               </Link>
-              <Link className="nav-link" to="/about">
+              <Link className="nav-link" to="/my-portfolio/about">
                 About
               </Link>
-              <Link className="nav-link" to="/contact">
+              <Link className="nav-link" to="/my-portfolio/contact">
                 Contact
               </Link>
             </Nav>
@@ -36,7 +39,7 @@ function App() {
         </Navbar>
 
         <Route
-          path="/"
+          path="/my-portfolio"
           exact
           render={() => (
             <HomePage
@@ -47,12 +50,12 @@ function App() {
           )}
         />
         <Route
-          path="/about"
+          path="/my-portfolio/about"
           exact
           render={() => <AboutPage title={about.title} />}
         />
         <Route
-          path="/contact"
+          path="/my-portfolio/contact"
           exact
           render={() => <ContactPage title={contact.title} />}
         />

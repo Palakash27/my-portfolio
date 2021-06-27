@@ -16,7 +16,7 @@ function App() {
           <Navbar.Brand>
             <a
               style={{ textDecoration: "none", color: "inherit" }}
-              href="/my-portfolio"
+              href="/"
             >
               {title}
             </a>
@@ -25,13 +25,13 @@ function App() {
           <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
           <Navbar.Collapse id="navbar-toggle">
             <Nav className="ml-auto">
-              <Link className="nav-link" to="/my-portfolio">
+              <Link className="nav-link" to="/">
                 Home
               </Link>
-              <Link className="nav-link" to="/my-portfolio/about">
+              <Link className="nav-link" to="/about">
                 About
               </Link>
-              <Link className="nav-link" to="/my-portfolio/contact">
+              <Link className="nav-link" to="/contact">
                 Contact
               </Link>
             </Nav>
@@ -39,7 +39,17 @@ function App() {
         </Navbar>
 
         <Route
-          path="/my-portfolio"
+          path="/about"
+          exact
+          render={() => <AboutPage title={about.title} />}
+        />
+        <Route
+          path="/contact"
+          exact
+          render={() => <ContactPage title={contact.title} />}
+        />
+        <Route
+          path="/"
           exact
           render={() => (
             <HomePage
@@ -48,16 +58,6 @@ function App() {
               text={home.text}
             />
           )}
-        />
-        <Route
-          path="/my-portfolio/about"
-          exact
-          render={() => <AboutPage title={about.title} />}
-        />
-        <Route
-          path="/my-portfolio/contact"
-          exact
-          render={() => <ContactPage title={contact.title} />}
         />
         <Footer />
       </Container>

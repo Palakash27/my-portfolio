@@ -1,5 +1,5 @@
 // Set this to true for production
-var doCache = false;
+var doCache = true;
 
 var CACHE_NAME = "portfolio-pwa";
 

@@ -84,15 +84,6 @@ export default function Carousel() {
       selected: false,
     },
     {
-      id: 7,
-      title: "Top-ramen-app",
-      subTitle: "Top-ramen-app",
-      imgSrc: tra,
-      link: "http://top-ramen-app.herokuapp.com/",
-      scLink: "https://github.com/Palakash27/top-ramen-app",
-      selected: false,
-    },
-    {
       id: 8,
       title: "Nodejs-auth",
       subTitle: "Implemented authentication with passport.",

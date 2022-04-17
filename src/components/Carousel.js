@@ -13,7 +13,6 @@ import {
   git,
   node,
   rbp,
-  tra,
   booklib,
 } from "../assets/images";
 

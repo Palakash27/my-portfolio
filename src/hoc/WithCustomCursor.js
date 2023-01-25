@@ -28,16 +28,6 @@ const withCustomCursor =
             toggleCursorSize();
         }, []);
 
-        const mouseEnterEvent = useCallback(() => {
-            cursorVisible.current = true;
-            toggleCursorVisibility();
-        }, []);
-
-        const mouseLeaveEvent = useCallback(() => {
-            cursorVisible.current = false;
-            toggleCursorVisibility();
-        }, []);
-
         const mouseMoveEvent = useCallback((e) => {
             cursorVisible.current = true;
             toggleCursorVisibility();
@@ -47,6 +37,16 @@ const withCustomCursor =
 
             cursor.current.style.top = endY.current + "px";
             cursor.current.style.left = endX.current + "px";
+        }, []);
+
+        const mouseEnterEvent = useCallback(() => {
+            cursorVisible.current = true;
+            toggleCursorVisibility();
+        }, []);
+
+        const mouseLeaveEvent = useCallback(() => {
+            cursorVisible.current = false;
+            toggleCursorVisibility();
         }, []);
 
         const animateDotOutline = useCallback(() => {
@@ -60,10 +60,15 @@ const withCustomCursor =
         }, []);
 
         useEffect(() => {
+            // after pressing the mouse button, the cursor will be enlarged
             window.addEventListener("mousedown", mouseOverEvent);
+            // after releasing the mouse button, the cursor will be normal
             window.addEventListener("mouseup", mouseOutEvent);
+            // move the cursor
             window.addEventListener("mousemove", mouseMoveEvent);
+            // when the mouse enters the window, the cursor will be visible
             window.addEventListener("mouseenter", mouseEnterEvent);
+            // when the mouse leaves the window, the cursor will be hidden
             window.addEventListener("mouseleave", mouseLeaveEvent);
 
             animateDotOutline();
@@ -87,27 +92,23 @@ const withCustomCursor =
         ]);
 
         const toggleCursorVisibility = () => {
-            if (cursorVisible.current) {
-                cursor.current.style.opacity = 1;
-                cursorOutline.current.style.opacity = 1;
-            } else {
-                cursor.current.style.opacity = 0;
-                cursorOutline.current.style.opacity = 0;
-            }
+            cursor.current.style.opacity = cursorVisible.current ? 1 : 0;
+            cursorOutline.current.style.opacity = cursorVisible.current ? 1 : 0;
         };
 
         const toggleCursorSize = () => {
-            if (cursorEnlarged.current) {
-                cursor.current.style.transform =
-                    "translate(-50%, -50%) scale(0.75)";
-                cursorOutline.current.style.transform =
-                    "translate(-50%, -50%) scale(1.5)";
-            } else {
-                cursor.current.style.transform =
-                    "translate(-50%, -50%) scale(1)";
-                cursorOutline.current.style.transform =
-                    "translate(-50%, -50%) scale(1)";
-            }
+            cursor.current.style.transform = cursorEnlarged.current
+                ? "translate(-50%, -50%) scale(0)"
+                : "translate(-50%, -50%) scale(1)";
+            cursorOutline.current.style.transform = cursorEnlarged.current
+                ? "translate(-50%, -50%) scale(2)"
+                : "translate(-50%, -50%) scale(1)";
+            cursorOutline.current.style.background = cursorEnlarged.current
+                ? "rgb(222 191 241)"
+                : "rgb(159 35 237)";
+            cursorOutline.current.style.mixBlendMode = cursorEnlarged.current
+                ? "difference"
+                : "";
         };
 
         return (

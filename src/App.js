@@ -7,6 +7,7 @@ import { Banner } from "./components/Banner";
 import { Projects } from "./components/Projects";
 import { Footer } from "./components/Footer";
 import withCustomCursor from "./hoc/WithCustomCursor";
+import ShootingStars from "./components/ShootingStars/ShootingStars";
 
 function App({ cursor, cursorOutline, mouseOutEvent, mouseOverEvent }) {
     return (
@@ -15,7 +16,11 @@ function App({ cursor, cursorOutline, mouseOutEvent, mouseOverEvent }) {
             <div ref={cursor} className="cursor-dot"></div>
 
             <NavBar />
-            <Banner />
+            <ShootingStars />
+            <Banner
+                mouseOutEvent={mouseOutEvent}
+                mouseOverEvent={mouseOverEvent}
+            />
             <Projects />
             <Footer />
         </div>

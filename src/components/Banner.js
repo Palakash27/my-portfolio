@@ -8,7 +8,7 @@ import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 
-export const Banner = () => {
+export const Banner = ({ mouseOutEvent, mouseOverEvent }) => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState("");
@@ -92,7 +92,11 @@ export const Banner = () => {
                                             : ""
                                     }
                                 >
-                                    <span className="tagline">
+                                    <span
+                                        className="tagline"
+                                        onMouseOut={mouseOutEvent}
+                                        onMouseOver={mouseOverEvent}
+                                    >
                                         Welcome to my Portfolio
                                     </span>
                                     <h1
@@ -106,7 +110,10 @@ export const Banner = () => {
                                         {` I'm `}
                                         <span className="wrap">{text}</span>
                                     </h1>
-                                    <p>
+                                    <p
+                                        onMouseOut={mouseOutEvent}
+                                        onMouseOver={mouseOverEvent}
+                                    >
                                         My full name is Aakash Pal. I'm 25 years
                                         old. I am an electronics engineer and a
                                         Full-Stack Developer (Frontend-Heavy).

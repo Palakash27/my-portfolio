@@ -335,17 +335,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     object-fit: cover;
     border-radius: 50%;
     margin: 0px;
-    animation: updown 3s linear infinite;
+    animation: diagonal-float 5s infinite ease-in-out alternate;
 }
-@keyframes updown {
+@keyframes diagonal-float {
     0% {
-        transform: translateY(-20px);
-    }
-    50% {
-        transform: translateY(20px);
+        transform: translate(24px, -24px);
     }
     100% {
-        transform: translateY(-20px);
+        transform: translate(-24px, 24px);
     }
 }
 .banner .wave {

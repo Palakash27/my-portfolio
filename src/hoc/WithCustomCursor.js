@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 
 const withCustomCursor =
     (Children) =>
@@ -18,6 +18,47 @@ const withCustomCursor =
 
         const requestRef = useRef(null);
 
+        const mouseOverEvent = useCallback(() => {
+            cursorEnlarged.current = true;
+            toggleCursorSize();
+        }, []);
+
+        const mouseOutEvent = useCallback(() => {
+            cursorEnlarged.current = false;
+            toggleCursorSize();
+        }, []);
+
+        const mouseEnterEvent = useCallback(() => {
+            cursorVisible.current = true;
+            toggleCursorVisibility();
+        }, []);
+
+        const mouseLeaveEvent = useCallback(() => {
+            cursorVisible.current = false;
+            toggleCursorVisibility();
+        }, []);
+
+        const mouseMoveEvent = useCallback((e) => {
+            cursorVisible.current = true;
+            toggleCursorVisibility();
+
+            endX.current = e.pageX;
+            endY.current = e.pageY;
+
+            cursor.current.style.top = endY.current + "px";
+            cursor.current.style.left = endX.current + "px";
+        }, []);
+
+        const animateDotOutline = useCallback(() => {
+            _x.current += (endX.current - _x.current) / delay;
+            _y.current += (endY.current - _y.current) / delay;
+
+            cursorOutline.current.style.top = _y.current + "px";
+            cursorOutline.current.style.left = _x.current + "px";
+
+            requestRef.current = requestAnimationFrame(animateDotOutline);
+        }, []);
+
         useEffect(() => {
             window.addEventListener("mousedown", mouseOverEvent);
             window.addEventListener("mouseup", mouseOutEvent);
@@ -36,7 +77,14 @@ const withCustomCursor =
 
                 cancelAnimationFrame(requestRef.current);
             };
-        }, []);
+        }, [
+            animateDotOutline,
+            mouseEnterEvent,
+            mouseLeaveEvent,
+            mouseMoveEvent,
+            mouseOutEvent,
+            mouseOverEvent,
+        ]);
 
         const toggleCursorVisibility = () => {
             if (cursorVisible.current) {
@@ -62,46 +110,6 @@ const withCustomCursor =
             }
         };
 
-        const mouseOverEvent = () => {
-            cursorEnlarged.current = true;
-            toggleCursorSize();
-        };
-
-        const mouseOutEvent = () => {
-            cursorEnlarged.current = false;
-            toggleCursorSize();
-        };
-
-        const mouseEnterEvent = () => {
-            cursorVisible.current = true;
-            toggleCursorVisibility();
-        };
-
-        const mouseLeaveEvent = () => {
-            cursorVisible.current = false;
-            toggleCursorVisibility();
-        };
-
-        const mouseMoveEvent = (e) => {
-            cursorVisible.current = true;
-            toggleCursorVisibility();
-
-            endX.current = e.pageX;
-            endY.current = e.pageY;
-
-            cursor.current.style.top = endY.current + "px";
-            cursor.current.style.left = endX.current + "px";
-        };
-
-        const animateDotOutline = () => {
-            _x.current += (endX.current - _x.current) / delay;
-            _y.current += (endY.current - _y.current) / delay;
-
-            cursorOutline.current.style.top = _y.current + "px";
-            cursorOutline.current.style.left = _x.current + "px";
-
-            requestRef.current = requestAnimationFrame(animateDotOutline);
-        };
         return (
             <Children
                 {...props}

@@ -6,7 +6,7 @@ import { Banner } from "./components/Banner";
 // import SmoothScroll from "./components/SmoothScroll/SmoothScroll";
 import { Projects } from "./components/Projects";
 import { Footer } from "./components/Footer";
-import withCustomCursor from "./hoc/Cursor/WithCustomCursor";
+import withCustomCursor from "./hoc/WithCustomCursor";
 
 function App({ cursor, cursorOutline, mouseOutEvent, mouseOverEvent }) {
     return (

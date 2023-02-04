@@ -7,14 +7,23 @@ export const ProjectCard = ({ title, imgUrl, githubUrl, liveUrl }) => {
                 <img src={imgUrl} alt="project-img" />
                 <div className="proj-txtx">
                     <h5>{title}</h5>
-                    <div>
+                    <div
+                        style={{
+                            display: "flex",
+                            flexDirection: "row",
+                            justifyContent: "space-around",
+                        }}
+                    >
                         <h5>
                             <a
                                 href={githubUrl}
                                 target="_blank"
                                 rel="noreferrer"
+                                style={{
+                                    color: "white",
+                                }}
                             >
-                                Github
+                                Source Code
                             </a>
                         </h5>
                         <h5>
@@ -22,8 +31,11 @@ export const ProjectCard = ({ title, imgUrl, githubUrl, liveUrl }) => {
                                 href={githubUrl}
                                 target="_blank"
                                 rel="noreferrer"
+                                style={{
+                                    color: "white",
+                                }}
                             >
-                                Live
+                                Live Demo
                             </a>
                         </h5>
                     </div>

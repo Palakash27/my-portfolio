@@ -1,3 +1,4 @@
+import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { NavBar } from "./components/NavBar";
@@ -11,19 +12,21 @@ import ShootingStars from "./components/ShootingStars/ShootingStars";
 
 function App({ cursor, cursorOutline, mouseOutEvent, mouseOverEvent }) {
     return (
-        <div className="App">
-            <div ref={cursorOutline} className="cursor-dot-outline"></div>
-            <div ref={cursor} className="cursor-dot"></div>
+        <Router>
+            <div className="App">
+                <div ref={cursorOutline} className="cursor-dot-outline"></div>
+                <div ref={cursor} className="cursor-dot"></div>
 
-            <NavBar />
-            <ShootingStars />
-            <Banner
-                mouseOutEvent={mouseOutEvent}
-                mouseOverEvent={mouseOverEvent}
-            />
-            <Projects />
-            <Footer />
-        </div>
+                <NavBar />
+                <ShootingStars />
+                <Banner
+                    mouseOutEvent={mouseOutEvent}
+                    mouseOverEvent={mouseOverEvent}
+                />
+                <Projects />
+                <Footer />
+            </div>
+        </Router>
     );
 }
 

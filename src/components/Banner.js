@@ -8,6 +8,9 @@ import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 
+import { ArrowRightCircle } from "react-bootstrap-icons";
+import { Link } from "react-router-dom";
+
 export const Banner = ({ mouseOutEvent, mouseOverEvent }) => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
@@ -150,12 +153,12 @@ export const Banner = ({ mouseOutEvent, mouseOverEvent }) => {
                                             />
                                         </a>
                                     </div>
-                                    {/* <button
-                                        onClick={() => console.log("connect")}
-                                    >
-                                        Let’s Connect{" "}
-                                        <ArrowRightCircle size={25} />
-                                    </button> */}
+                                    <Link to="https://resume.aakashpal.tech/">
+                                        <button>
+                                            View Resume{" "}
+                                            <ArrowRightCircle size={25} />
+                                        </button>
+                                    </Link>
                                 </div>
                             )}
                         </TrackVisibility>

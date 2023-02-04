@@ -14,52 +14,64 @@ import TrackVisibility from "react-on-screen";
 export const Projects = () => {
     const projects = [
         {
-            description: "Design & Development",
+            title: "Algorithm Visualizer",
             imgUrl: projImg1,
+            githubUrl: "https://github.com/Palakash27/Algorithm-Visualizer",
+            liveUrl: "http://algorithm-visualizer-psi.vercel.app/",
         },
         {
-            description: "Design & Development",
+            title: "Type The Alphabet",
             imgUrl: projImg2,
+            githubUrl: "https://github.com/Palakash27/type-the-alphabet",
+            liveUrl: "http://type-the-alphabet.vercel.app/",
         },
         {
-            description: "Design & Development",
+            title: "Drive Test Kiosk",
             imgUrl: projImg3,
+            githubUrl: "https://github.com/Palakash27/drive-test-kiosk",
+            liveUrl: "http://drive-test-kiosk.vercel.app/",
         },
         {
-            description: "Design & Development",
+            title: "Node.js Auth",
             imgUrl: projImg4,
+            githubUrl: "https://github.com/Palakash27/nodejs-auth",
+            liveUrl: "https://palakash27-nodejs-auth.herokuapp.com/users/login",
         },
         {
-            description: "Design & Development",
+            title: "Chat App",
             imgUrl: projImg5,
+            githubUrl: "https://github.com/Palakash27/chat-app",
+            liveUrl: "https://react-chatting-app-react.herokuapp.com/",
         },
         {
-            description: "Design & Development",
+            title: "Infinite Scroll Post",
             imgUrl: projImg6,
+            githubUrl: "https://github.com/Palakash27/InfiniteScrollPost",
+            liveUrl: "http://infinite-scroll-post.vercel.app/",
         },
         {
-            description: "Design & Development",
+            title: "Student Hub",
             imgUrl: projImg1,
+            githubUrl: "https://github.com/Palakash27/student-hub",
+            liveUrl: "https://student-hub.aakashpal.tech/",
         },
         {
-            description: "Design & Development",
+            title: "Fifa Data Visualization",
             imgUrl: projImg2,
+            githubUrl: "https://github.com/Palakash27/FIFA-data-visualization",
+            liveUrl: "http://fifa-data-visualization.vercel.app/",
         },
         {
-            description: "Design & Development",
+            title: "Resume",
             imgUrl: projImg3,
+            githubUrl: "https://github.com/Palakash27/resume",
+            liveUrl: "https://resume.aakashpal.tech/",
         },
         {
-            description: "Design & Development",
+            title: "Starwars Client",
             imgUrl: projImg4,
-        },
-        {
-            description: "Design & Development",
-            imgUrl: projImg5,
-        },
-        {
-            description: "Design & Development",
-            imgUrl: projImg6,
+            githubUrl: "https://github.com/Palakash27/starwars-client",
+            liveUrl: "http://starwars-client.vercel.app/",
         },
     ];
 

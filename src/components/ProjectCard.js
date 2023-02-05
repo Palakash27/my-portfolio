@@ -28,7 +28,7 @@ export const ProjectCard = ({ title, imgUrl, githubUrl, liveUrl }) => {
                         </h5>
                         <h5>
                             <a
-                                href={githubUrl}
+                                href={liveUrl}
                                 target="_blank"
                                 rel="noreferrer"
                                 style={{

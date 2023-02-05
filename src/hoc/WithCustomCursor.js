@@ -93,7 +93,9 @@ const withCustomCursor =
 
         const toggleCursorVisibility = () => {
             cursor.current.style.opacity = cursorVisible.current ? 1 : 0;
-            cursorOutline.current.style.opacity = cursorVisible.current ? 1 : 0;
+            cursorOutline.current.style.opacity = cursorVisible.current
+                ? 0.6
+                : 0;
         };
 
         const toggleCursorSize = () => {

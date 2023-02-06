@@ -13,10 +13,10 @@ import ShootingStars from "./components/ShootingStars/ShootingStars";
 
 import ReactGA from "react-ga";
 const TRACKING_ID = "G-HFW27BNKDZ";
-ReactGA.initialize(TRACKING_ID);
 
 function App({ cursor, cursorOutline, mouseOutEvent, mouseOverEvent }) {
     useEffect(() => {
+        ReactGA.initialize(TRACKING_ID);
         ReactGA.pageview(window.location.pathname + window.location.search);
     });
     return (

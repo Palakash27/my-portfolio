@@ -7,13 +7,6 @@ export default function ShootingStars() {
             <span></span>
             <span></span>
             <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
         </section>
     );
 }

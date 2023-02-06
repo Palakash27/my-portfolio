@@ -11,6 +11,11 @@ import { ArrowRightCircle } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
 import useBanner from "./useBanner";
 import { handleClickGAEvent } from "../../util/contants";
+import {
+    HERO_DESCRIPTION,
+    HERO_GREETING,
+    HERO_WELCOME,
+} from "../../util/texts";
 
 export const Banner = ({ mouseOutEvent, mouseOverEvent }) => {
     const { handleMouseMove, handleMouseLeave, imgRef, text, gaEventTracker } =
@@ -41,29 +46,26 @@ export const Banner = ({ mouseOutEvent, mouseOverEvent }) => {
                                         onMouseOut={mouseOutEvent}
                                         onMouseOver={mouseOverEvent}
                                     >
-                                        Welcome to my Portfolio
+                                        {HERO_WELCOME}
                                     </span>
                                     <h1
                                         style={{
                                             height: "200px",
                                         }}
                                     >
-                                        {`Hello!`}
-                                        <span className="wave">👋🏽</span>
+                                        {HERO_GREETING.hello}
+                                        <span className="wave">
+                                            {HERO_GREETING.wave}
+                                        </span>
                                         <br />
-                                        {` I'm `}
+                                        {HERO_GREETING.me}
                                         <span className="wrap">{text}</span>
                                     </h1>
                                     <p
                                         onMouseOut={mouseOutEvent}
                                         onMouseOver={mouseOverEvent}
                                     >
-                                        My full name is Aakash Pal. I'm 25 years
-                                        old. I am an electronics engineer and a
-                                        Full-Stack Developer (Frontend-Heavy).
-                                        I'm constantly learning new things and
-                                        when I'm not learning, Maybe I am
-                                        playing games or distracted :p
+                                        {HERO_DESCRIPTION}
                                     </p>
                                     <div className="social-icon">
                                         <a

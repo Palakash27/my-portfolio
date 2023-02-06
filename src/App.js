@@ -3,8 +3,6 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { NavBar } from "./components/NavBar";
 import { Banner } from "./components/Banner/Banner";
-// import { Skills } from "./components/Skills";
-// import SmoothScroll from "./components/SmoothScroll/SmoothScroll";
 import { Projects } from "./components/Projects";
 import { Footer } from "./components/Footer";
 import withCustomCursor from "./hoc/WithCustomCursor";

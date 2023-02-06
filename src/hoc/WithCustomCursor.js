@@ -60,15 +60,10 @@ const withCustomCursor =
         }, []);
 
         useEffect(() => {
-            // after pressing the mouse button, the cursor will be enlarged
             window.addEventListener("mousedown", mouseOverEvent);
-            // after releasing the mouse button, the cursor will be normal
             window.addEventListener("mouseup", mouseOutEvent);
-            // move the cursor
             window.addEventListener("mousemove", mouseMoveEvent);
-            // when the mouse enters the window, the cursor will be visible
             window.addEventListener("mouseenter", mouseEnterEvent);
-            // when the mouse leaves the window, the cursor will be hidden
             window.addEventListener("mouseleave", mouseLeaveEvent);
 
             animateDotOutline();

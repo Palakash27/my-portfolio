@@ -6,7 +6,6 @@ export default function useBanner() {
     const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState("");
     const [delta, setDelta] = useState(300 - Math.random() * 100);
-    // const [index, setIndex] = useState(1);
     const gaEventTracker = useAnalyticsEventTracker("Banners-Section");
     const period = 2000;
     let imgRef = useRef(null);
@@ -29,15 +28,12 @@ export default function useBanner() {
 
         if (!isDeleting && updatedText === fullText) {
             setIsDeleting(true);
-            // setIndex((prevIndex) => prevIndex - 1);
             setDelta(period);
         } else if (isDeleting && updatedText === "") {
             setIsDeleting(false);
             setLoopNum(loopNum + 1);
-            // setIndex(1);
             setDelta(500);
         } else {
-            // setIndex((prevIndex) => prevIndex + 1);
         }
     }, [isDeleting, loopNum, text.length]);
 

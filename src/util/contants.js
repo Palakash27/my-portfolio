@@ -76,6 +76,5 @@ export const PROJECTS_DIVIDE = [
 ];
 
 export const handleClickGAEvent = (e, gaEventTracker) => {
-    const { eventlabel } = e.target;
-    gaEventTracker("Click", eventlabel);
+    gaEventTracker("Click", e.target.getAttribute("eventlabel"));
 };

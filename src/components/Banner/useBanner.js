@@ -7,7 +7,7 @@ export default function useBanner() {
     const [text, setText] = useState("");
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     // const [index, setIndex] = useState(1);
-    const gaEventTracker = useAnalyticsEventTracker("Banner");
+    const gaEventTracker = useAnalyticsEventTracker("Banners-Section");
     const period = 2000;
     let imgRef = useRef(null);
     let XAngle = 1;
@@ -66,16 +66,11 @@ export default function useBanner() {
         imgRef.current.transform = `scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`;
     };
 
-    const handleClickGAEvent = (e) => {
-        const { eventlabel } = e.target;
-        gaEventTracker("Click", eventlabel);
-    };
-
     return {
         handleMouseMove,
         handleMouseLeave,
         imgRef,
         text,
-        handleClickGAEvent,
+        gaEventTracker,
     };
 }

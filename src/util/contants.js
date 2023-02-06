@@ -74,3 +74,8 @@ export const PROJECTS_DIVIDE = [
     (2 * PROJECTS.length) / 3,
     PROJECTS.length,
 ];
+
+export const handleClickGAEvent = (e, gaEventTracker) => {
+    const { eventlabel } = e.target;
+    gaEventTracker("Click", eventlabel);
+};

@@ -1,6 +1,13 @@
 import { Col } from "react-bootstrap";
+import { handleClickGAEvent } from "../util/contants";
 
-export const ProjectCard = ({ title, imgUrl, githubUrl, liveUrl }) => {
+export const ProjectCard = ({
+    title,
+    imgUrl,
+    githubUrl,
+    liveUrl,
+    gaEventTracker,
+}) => {
     return (
         <Col size={12} sm={6} md={4}>
             <div className="proj-imgbx">
@@ -22,6 +29,10 @@ export const ProjectCard = ({ title, imgUrl, githubUrl, liveUrl }) => {
                                 style={{
                                     color: "white",
                                 }}
+                                eventlabel={`source-code-${title}`}
+                                onClick={(e) =>
+                                    handleClickGAEvent(e, gaEventTracker)
+                                }
                             >
                                 Source Code
                             </a>
@@ -34,6 +45,10 @@ export const ProjectCard = ({ title, imgUrl, githubUrl, liveUrl }) => {
                                 style={{
                                     color: "white",
                                 }}
+                                eventlabel={`live-demo-${title}`}
+                                onClick={(e) =>
+                                    handleClickGAEvent(e, gaEventTracker)
+                                }
                             >
                                 Live Demo
                             </a>

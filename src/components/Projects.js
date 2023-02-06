@@ -2,9 +2,16 @@ import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
-import { PROJECTS, PROJECTS_DIVIDE } from "../util/contants";
+import {
+    handleClickGAEvent,
+    PROJECTS,
+    PROJECTS_DIVIDE,
+} from "../util/contants";
+import useAnalyticsEventTracker from "../hooks/useAnalyticsEventTracker";
 
 export const Projects = () => {
+    const gaEventTracker = useAnalyticsEventTracker("Projects-Section");
+
     return (
         <section className="project" id="projects">
             <Container>
@@ -35,6 +42,15 @@ export const Projects = () => {
                                                     <Nav.Item key={key}>
                                                         <Nav.Link
                                                             eventKey={key}
+                                                            eventlabel={`Tab ${
+                                                                idx + 1
+                                                            }`}
+                                                            onClick={(e) =>
+                                                                handleClickGAEvent(
+                                                                    e,
+                                                                    gaEventTracker
+                                                                )
+                                                            }
                                                         >
                                                             Tab {idx + 1}
                                                         </Nav.Link>
@@ -73,6 +89,9 @@ export const Projects = () => {
                                                                         <ProjectCard
                                                                             key={
                                                                                 index
+                                                                            }
+                                                                            gaEventTracker={
+                                                                                gaEventTracker
                                                                             }
                                                                             {...project}
                                                                         />

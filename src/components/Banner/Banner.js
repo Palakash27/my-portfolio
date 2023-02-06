@@ -10,15 +10,11 @@ import navIcon3 from "../../assets/img/nav-icon3.svg";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
 import useBanner from "./useBanner";
+import { handleClickGAEvent } from "../../util/contants";
 
 export const Banner = ({ mouseOutEvent, mouseOverEvent }) => {
-    const {
-        handleMouseMove,
-        handleMouseLeave,
-        imgRef,
-        text,
-        handleClickGAEvent,
-    } = useBanner();
+    const { handleMouseMove, handleMouseLeave, imgRef, text, gaEventTracker } =
+        useBanner();
 
     return (
         <section
@@ -75,7 +71,12 @@ export const Banner = ({ mouseOutEvent, mouseOverEvent }) => {
                                             target="_blank"
                                             rel="noreferrer"
                                             eventlabel="linkedIn"
-                                            onClick={handleClickGAEvent}
+                                            onClick={(e) =>
+                                                handleClickGAEvent(
+                                                    e,
+                                                    gaEventTracker
+                                                )
+                                            }
                                         >
                                             <img
                                                 src={navIcon1}
@@ -87,7 +88,12 @@ export const Banner = ({ mouseOutEvent, mouseOverEvent }) => {
                                             target="_blank"
                                             rel="noreferrer"
                                             eventlabel="github"
-                                            onClick={handleClickGAEvent}
+                                            onClick={(e) =>
+                                                handleClickGAEvent(
+                                                    e,
+                                                    gaEventTracker
+                                                )
+                                            }
                                         >
                                             <img src={navIcon2} alt="github" />
                                         </a>
@@ -96,7 +102,12 @@ export const Banner = ({ mouseOutEvent, mouseOverEvent }) => {
                                             target="_blank"
                                             rel="noreferrer"
                                             eventlabel="instagram"
-                                            onClick={handleClickGAEvent}
+                                            onClick={(e) =>
+                                                handleClickGAEvent(
+                                                    e,
+                                                    gaEventTracker
+                                                )
+                                            }
                                         >
                                             <img
                                                 src={navIcon3}
@@ -111,7 +122,12 @@ export const Banner = ({ mouseOutEvent, mouseOverEvent }) => {
                                     >
                                         <button
                                             eventlabel="resume"
-                                            onClick={handleClickGAEvent}
+                                            onClick={(e) =>
+                                                handleClickGAEvent(
+                                                    e,
+                                                    gaEventTracker
+                                                )
+                                            }
                                         >
                                             View Resume{" "}
                                             <ArrowRightCircle size={25} />

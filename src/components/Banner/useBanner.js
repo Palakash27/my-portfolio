@@ -67,8 +67,8 @@ export default function useBanner() {
     };
 
     const handleClickGAEvent = (e) => {
-        const { eventLabel } = e.target;
-        gaEventTracker("Click", eventLabel);
+        const { eventlabel } = e.target;
+        gaEventTracker("Click", eventlabel);
     };
 
     return {

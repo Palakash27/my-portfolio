@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -11,14 +10,7 @@ import { Footer } from "./components/Footer";
 import withCustomCursor from "./hoc/WithCustomCursor";
 import ShootingStars from "./components/ShootingStars/ShootingStars";
 
-import ReactGA from "react-ga";
-const TRACKING_ID = "G-HFW27BNKDZ";
-
 function App({ cursor, cursorOutline, mouseOutEvent, mouseOverEvent }) {
-    useEffect(() => {
-        ReactGA.initialize(TRACKING_ID);
-        ReactGA.pageview(window.location.pathname + window.location.search);
-    });
     return (
         <Router>
             <div className="App">

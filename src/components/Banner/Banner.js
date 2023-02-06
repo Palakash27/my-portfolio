@@ -74,7 +74,7 @@ export const Banner = ({ mouseOutEvent, mouseOverEvent }) => {
                                             href="https://www.linkedin.com/in/palakash27/"
                                             target="_blank"
                                             rel="noreferrer"
-                                            eventLabel="linkedIn"
+                                            eventlabel="linkedIn"
                                             onClick={handleClickGAEvent}
                                         >
                                             <img
@@ -86,7 +86,7 @@ export const Banner = ({ mouseOutEvent, mouseOverEvent }) => {
                                             href="https://github.com/Palakash27"
                                             target="_blank"
                                             rel="noreferrer"
-                                            eventLabel="github"
+                                            eventlabel="github"
                                             onClick={handleClickGAEvent}
                                         >
                                             <img src={navIcon2} alt="github" />
@@ -95,7 +95,7 @@ export const Banner = ({ mouseOutEvent, mouseOverEvent }) => {
                                             href="https://www.instagram.com/guyshetoldyounottoworryabout/"
                                             target="_blank"
                                             rel="noreferrer"
-                                            eventLabel="instagram"
+                                            eventlabel="instagram"
                                             onClick={handleClickGAEvent}
                                         >
                                             <img
@@ -110,7 +110,7 @@ export const Banner = ({ mouseOutEvent, mouseOverEvent }) => {
                                         rel="noreferrer"
                                     >
                                         <button
-                                            eventLabel="resume"
+                                            eventlabel="resume"
                                             onClick={handleClickGAEvent}
                                         >
                                             View Resume{" "}

@@ -32,7 +32,7 @@ export const Projects = () => {
                                         >
                                             {["first", "second", "third"].map(
                                                 (key, idx) => (
-                                                    <Nav.Item>
+                                                    <Nav.Item key={key}>
                                                         <Nav.Link
                                                             eventKey={key}
                                                         >
@@ -52,7 +52,10 @@ export const Projects = () => {
                                         >
                                             {["first", "second", "third"].map(
                                                 (key, idx) => (
-                                                    <Tab.Pane eventKey={key}>
+                                                    <Tab.Pane
+                                                        eventKey={key}
+                                                        key={key}
+                                                    >
                                                         <Row>
                                                             {PROJECTS.slice(
                                                                 PROJECTS_DIVIDE[

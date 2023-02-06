@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { NavBar } from "./components/NavBar";
-import { Banner } from "./components/Banner";
+import { Banner } from "./components/Banner/Banner";
 // import { Skills } from "./components/Skills";
 // import SmoothScroll from "./components/SmoothScroll/SmoothScroll";
 import { Projects } from "./components/Projects";
@@ -12,7 +12,7 @@ import withCustomCursor from "./hoc/WithCustomCursor";
 import ShootingStars from "./components/ShootingStars/ShootingStars";
 
 import ReactGA from "react-ga";
-const TRACKING_ID = "UA-222577963-1";
+const TRACKING_ID = "G-HFW27BNKDZ";
 ReactGA.initialize(TRACKING_ID);
 
 function App({ cursor, cursorOutline, mouseOutEvent, mouseOverEvent }) {

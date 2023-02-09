@@ -72,7 +72,7 @@ export const Banner = ({ mouseOutEvent, mouseOverEvent }) => {
                                             href="https://www.linkedin.com/in/palakash27/"
                                             target="_blank"
                                             rel="noreferrer"
-                                            eventlabel="linkedIn"
+                                            eventlabel="banner-linkedIn"
                                             onClick={(e) =>
                                                 handleClickGAEvent(
                                                     e,
@@ -89,7 +89,7 @@ export const Banner = ({ mouseOutEvent, mouseOverEvent }) => {
                                             href="https://github.com/Palakash27"
                                             target="_blank"
                                             rel="noreferrer"
-                                            eventlabel="github"
+                                            eventlabel="banner-github"
                                             onClick={(e) =>
                                                 handleClickGAEvent(
                                                     e,
@@ -103,7 +103,7 @@ export const Banner = ({ mouseOutEvent, mouseOverEvent }) => {
                                             href="https://www.instagram.com/guyshetoldyounottoworryabout/"
                                             target="_blank"
                                             rel="noreferrer"
-                                            eventlabel="instagram"
+                                            eventlabel="banner-instagram"
                                             onClick={(e) =>
                                                 handleClickGAEvent(
                                                     e,
@@ -123,7 +123,7 @@ export const Banner = ({ mouseOutEvent, mouseOverEvent }) => {
                                         rel="noreferrer"
                                     >
                                         <button
-                                            eventlabel="resume"
+                                            eventlabel="banner-resume"
                                             onClick={(e) =>
                                                 handleClickGAEvent(
                                                     e,

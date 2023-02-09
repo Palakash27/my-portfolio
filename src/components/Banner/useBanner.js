@@ -13,7 +13,7 @@ export default function useBanner() {
     let YAngle = 1;
 
     const tick = useCallback(() => {
-        const toRotate = ["Aakash", "a Web Developer", "an Engineer"];
+        const toRotate = ["Aakash", "a Web Developer!", "an Engineer!"];
         let i = loopNum % toRotate.length;
         let fullText = toRotate[i];
         let updatedText = isDeleting

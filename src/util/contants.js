@@ -18,24 +18,24 @@ export const PROJECTS = [
         githubUrl: "https://github.com/Palakash27/type-the-alphabet",
         liveUrl: "http://type-the-alphabet.vercel.app/",
     },
-    {
-        title: "Drive Test Kiosk",
-        imgUrl: projImg3,
-        githubUrl: "https://github.com/Palakash27/drive-test-kiosk",
-        liveUrl: "http://drive-test-kiosk.vercel.app/",
-    },
-    {
-        title: "Node.js Auth",
-        imgUrl: projImg4,
-        githubUrl: "https://github.com/Palakash27/nodejs-auth",
-        liveUrl: "https://palakash27-nodejs-auth.herokuapp.com/users/login",
-    },
-    {
-        title: "Chat App",
-        imgUrl: projImg5,
-        githubUrl: "https://github.com/Palakash27/chat-app",
-        liveUrl: "https://react-chatting-app-react.herokuapp.com/",
-    },
+    // {
+    //     title: "Drive Test Kiosk",
+    //     imgUrl: projImg3,
+    //     githubUrl: "https://github.com/Palakash27/drive-test-kiosk",
+    //     liveUrl: "http://drive-test-kiosk.vercel.app/",
+    // },
+    // {
+    //     title: "Node.js Auth",
+    //     imgUrl: projImg4,
+    //     githubUrl: "https://github.com/Palakash27/nodejs-auth",
+    //     liveUrl: "https://palakash27-nodejs-auth.herokuapp.com/users/login",
+    // },
+    // {
+    //     title: "Chat App",
+    //     imgUrl: projImg5,
+    //     githubUrl: "https://github.com/Palakash27/chat-app",
+    //     liveUrl: "https://react-chatting-app-react.herokuapp.com/",
+    // },
     {
         title: "Infinite Scroll Post",
         imgUrl: projImg6,
@@ -60,12 +60,12 @@ export const PROJECTS = [
         githubUrl: "https://github.com/Palakash27/resume",
         liveUrl: "https://resume.aakashpal.tech/",
     },
-    {
-        title: "Starwars Client",
-        imgUrl: projImg4,
-        githubUrl: "https://github.com/Palakash27/starwars-client",
-        liveUrl: "http://starwars-client.vercel.app/",
-    },
+    // {
+    //     title: "Starwars Client",
+    //     imgUrl: projImg4,
+    //     githubUrl: "https://github.com/Palakash27/starwars-client",
+    //     liveUrl: "http://starwars-client.vercel.app/",
+    // },
 ];
 
 export const PROJECTS_DIVIDE = [

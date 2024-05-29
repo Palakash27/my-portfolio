@@ -118,7 +118,7 @@ export const Banner = ({ mouseOutEvent, mouseOverEvent }) => {
                                         </a>
                                     </div>
                                     <Link
-                                        to="https://resume.aakashpal.tech/"
+                                        to="https://resume.aakashpal.me/"
                                         target="_blank"
                                         rel="noreferrer"
                                     >

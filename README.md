@@ -6,4 +6,4 @@ Built using:
 -   CSS framework: React-bootstrap
 -   CSS animations library: Animate.css
 
-Website: https://aakashpal.tech/
+Website: https://aakashpal.me/

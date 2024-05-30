@@ -10,13 +10,13 @@ export const PROJECTS = [
         title: "Algorithm Visualizer",
         imgUrl: projImg1,
         githubUrl: "https://github.com/Palakash27/Algorithm-Visualizer",
-        liveUrl: "http://algorithm-visualizer-psi.vercel.app/",
+        liveUrl: "http://algorithm-visualizer.aakashpal.me",
     },
     {
         title: "Type The Alphabet",
         imgUrl: projImg2,
         githubUrl: "https://github.com/Palakash27/type-the-alphabet",
-        liveUrl: "http://type-the-alphabet.vercel.app/",
+        liveUrl: "http://type-the-alphabet.aakashpal.me",
     },
     // {
     //     title: "Drive Test Kiosk",
@@ -40,13 +40,13 @@ export const PROJECTS = [
         title: "Infinite Scroll Post",
         imgUrl: projImg6,
         githubUrl: "https://github.com/Palakash27/InfiniteScrollPost",
-        liveUrl: "http://infinite-scroll-post.vercel.app/",
+        liveUrl: "http://infinite-scroll-post.aakashpal.me",
     },
     {
         title: "Student Hub",
         imgUrl: projImg1,
         githubUrl: "https://github.com/Palakash27/student-hub",
-        liveUrl: "https://student-hub.aakashpal.tech/",
+        liveUrl: "https://student-hub.aakashpal.me/",
     },
     {
         title: "Fifa Data Visualization",
@@ -58,7 +58,7 @@ export const PROJECTS = [
         title: "Resume",
         imgUrl: projImg3,
         githubUrl: "https://github.com/Palakash27/resume",
-        liveUrl: "https://resume.aakashpal.tech/",
+        liveUrl: "https://resume.aakashpal.me/",
     },
     // {
     //     title: "Starwars Client",

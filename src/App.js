@@ -15,14 +15,14 @@ function App({ cursor, cursorOutline, mouseOutEvent, mouseOverEvent }) {
                 <div ref={cursorOutline} className="cursor-dot-outline"></div>
                 <div ref={cursor} className="cursor-dot"></div>
 
-                <NavBar />
-                <ShootingStars />
+                {/* <NavBar /> */}
+                {/* <ShootingStars /> */}
                 <Banner
                     mouseOutEvent={mouseOutEvent}
                     mouseOverEvent={mouseOverEvent}
                 />
-                <Projects />
-                <Footer />
+                {/* <Projects /> */}
+                {/* <Footer /> */}
             </div>
         </Router>
     );

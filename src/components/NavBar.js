@@ -32,7 +32,7 @@ export const NavBar = () => {
         <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
             <Container>
                 <Navbar.Brand
-                    href="/"
+                    href="#home"
                     eventlabel="navbar-logo"
                     onClick={(e) => handleClickGAEvent(e, gaEventTracker)}
                 >
